@@ -1,0 +1,107 @@
+/* Tampilan Dasar & Warna */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f9;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: #007bff;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+/* Container dengan ukuran relatif */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+/* Kartu Profil Utama */
+.profile-card {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.profile-img {
+  width: 150px;
+  max-width: 100%; /* Memastikan gambar tidak melebihi container */
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Tombol Interaksi */
+.button-group {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Tata Letak Kartu Hobi / Keterampilan (Default: 1 Kolom untuk Layar HP < 768px) */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Media Query untuk Layar Desktop / Tablet (>= 768px -> 3 Kolom) */
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mode Gelap (Dark Mode) */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .profile-card,
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(255,255,255,0.05);
+}
+
+body.dark-mode button {
+  background-color: #bb86fc;
+  color: #000000;
+}
